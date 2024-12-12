@@ -1,0 +1,41 @@
+/* Responsive styles for iPhone/iPad */
+
+/* Apply styles for devices with a maximum width of 1024px (e.g., iPad in portrait mode) */
+@media (max-width: 1024px) {
+    .image-container {
+        position: static; /* Reset absolute positioning */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        margin: 20px auto; /* Add some spacing */
+        width: 90%; /* Adjust container width */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Apply styles for devices with a maximum width of 768px (e.g., iPhone and smaller tablets) */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Stack images if there are multiple */
+        margin: 10px auto;
+    }
+
+    .image-container img {
+        max-width: 80%; /* Further reduce image size */
+    }
+}
+
+/* Apply styles for devices with a maximum width of 480px (e.g., small smartphones) */
+@media (max-width: 480px) {
+    .image-container {
+        margin: 5px auto;
+    }
+
+    .image-container img {
+        max-width: 70%; /* Even smaller images */
+    }
+}
